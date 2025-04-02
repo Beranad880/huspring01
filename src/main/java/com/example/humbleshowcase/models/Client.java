@@ -1,5 +1,6 @@
 package com.example.humbleshowcase.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,10 +19,11 @@ public class Client {
     private String name;
     private String email;
     private String phone;
-    private String personalNumber;  // Rodné číslo
+    private String personalNumber;
     private String address;
 
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private List<Insurance> insurances;
 
