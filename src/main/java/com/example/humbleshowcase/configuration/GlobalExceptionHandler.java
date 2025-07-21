@@ -1,4 +1,4 @@
-﻿package com.example.humbleshowcase.configuration;
+package com.example.humbleshowcase.configuration;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
